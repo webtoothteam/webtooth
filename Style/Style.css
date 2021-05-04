@@ -12,6 +12,12 @@ body {
     overflow-x: hidden;
 }
 
+.all-port{
+    display: none;
+    cursor: pointer;
+    font-family: 'OpenSans-300';
+}
+
 .block {
     width: 85%;
     position: relative;
@@ -1221,6 +1227,10 @@ a {
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+    
+        .all-port{
+        display: flex;
     }
 }
 
