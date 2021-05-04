@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web tooth</title>
+    <link rel="shortcut icon" href="../Style/Images/photo_2021-04-13_11-38-21.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="block">
+        <header class="header">
+
+            <div id="logo">
+             <a href="../index.html"><img src="images/logo webtooth.png" alt=""></a>   
+            </div>
+    
+                <div class="fill-brief">
+                <a class="ellipse">Fill in the brief</a>
+            </div>
+    
+            <nav class="menu">
+                <ul>
+                    <a href="coworking.html">
+                        <li>Portfolio</li>
+                    </a>
+    
+                    <a href="#">
+                        <li>Services</li>
+                    </a>
+    
+                    <a href="#">
+                        <li>Contacts</li>
+                    </a>
+    
+                </ul>
+            </nav>
+    
+            <div class="burger">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div class="line three"></div>
+            </div>
+    
+                <div class="burger-menu">
+                    <ul>
+                        <li><a href="coworking.html">Portfolio</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+    
+                    <div class="media">
+                        <a href="">Instagram</a>
+                        <a href="">Gmail</a>
+                        <a href="">Facebook</a>
+                        <a href="">Linkedin</a>
+                    </div>
+    
+                </div>
+    
+        </header>
+        <!-- <div class="header">
+            <div class="logo-image">
+                <a href="../index.html">
+                    <img src="images/logo webtooth.png" alt="">
+                </a>
+            </div>
+            <div class="ellipse-button ">
+                <button class="ellipse">Fill in the brief</button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../coworking.html">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="burger">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div class="line three"></div>
+            </div>
+            
+
+                <div class="burger-menu">
+                    <ul>
+                        <li><a href="../coworking.html">Portfolio</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+
+                    <div class="media">
+                        <a href="">Instagram</a>
+                        <a href="">Gmail</a>
+                        <a href="">Facebook</a>
+                        <a href="">Linkedin</a>
+                    </div>
+
+                </div>
+
+        </div> -->
+
+        <div class="information">
+            <h2>Services</h2>
+            <div class="serviceButton">
+                <button>Digital design</button>
+                <button>E-commerce</button>
+                <button>Branding</button>
+            </div>
+            <h2>A task</h2>
+            <div class="task">
+                <input type="text" placeholder="Description">
+                <button class="attach">Attach a file</button>
+            </div>
+
+            <h2>Contact details</h2>
+            <form action="" class="contact">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Company">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone">
+
+            </form>
+
+            <h2>How did you found out about us?</h2>
+            <div class="serviceButton">
+                <button>Recommendations</button>
+                <button>Work</button>
+                <button>Social media</button>
+            </div>
+        </div>
+<div class="brf">
+        <div class="sendBrief">
+            <button id="ellipse2"><div id="txt">Send the brief</div> </button>
+          
+        </div>
+          <a class="inf">By clicking on the button, you consent to the processing of personal data and agree to the
+                privacy
+                policy.</a>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <div class="fill">
+            <h1>Want to work with us? <a class="lefttext" href="">Fill in the brief <a class="arright">&#10230;</a> </a> </h1>
+        </div>
+        <div class="media">
+            <a href="">Instagram</a>
+            <a href="">Gmail</a>
+            <a href="">Facebook</a>
+            <a href="">Linkedin</a>
+        </div>
+        <div class="phone">
+            <a>+380 662 446 734</a>
+            <a>+380 979 520 868</a>
+        </div>
+    </footer>
+
+    <div class="arrow-up">
+        <img src="../Style/Images/arrow-up.png" alt="">
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).on({
+                scroll: () => {
+                    if (window.scrollY > 530) {
+                        $('.arrow-up').fadeIn();
+                        $('.arrow-up').css('display', 'flex');
+                    } else {
+                        $('.arrow-up').fadeOut();
+                    }
+                }
+            })
+
+            $('.arrow-up').click(() => {
+                $('html').animate({
+                    scrollTop: -900
+                }, 900)
+            })
+
+        })
+
+        let flag = false;
+            $('.burger').click(function () {
+                if (!flag) {
+                    $('.burger-menu').slideDown()
+                    $('.one').css('transform', 'rotate(45deg)')
+                    $('.two').css('width', '100%')
+                    $('.two').css('transform', 'rotate(-45deg)')
+                    $('.two').css('margin-top', '-15px')
+                    $('.three').css('width', '0')
+                } else {
+                    $('.burger-menu').slideUp()
+                    $('.one').css('transform', 'rotate(0)')
+                    $('.two').css('width', '80%')
+                    $('.two').css('transform', 'rotate(-0)')
+                    $('.two').css('margin-top', '0')
+                    $('.three').css('width', '100%')
+                }
+                flag = !flag
+            })
+    </script>
+</body>
+
+</html>
